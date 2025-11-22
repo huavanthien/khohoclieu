@@ -1,5 +1,5 @@
 {
-  "name": "Khohoclieu",
+  "name": "edukho-app",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "start": "tsx server/index.ts"
   },
   "dependencies": {
-    "@google/genai": "latest",
+    "@google/genai": "^0.1.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "lucide-react": "^0.344.0",

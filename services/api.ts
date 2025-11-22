@@ -1,8 +1,9 @@
 import { Resource, User, Category, ResourceStatus, Review } from "../types";
 
-// In production (Render), the API is served from the same domain, so we use a relative path.
-// In development, if not proxied, we might use localhost, but Vite proxy handles '/api' too.
-const API_URL = (import.meta as any).env.PROD ? "/api" : "http://localhost:5000/api";
+// Use relative path for API. 
+// In Development: Vite proxy (configured in vite.config.ts) forwards /api to http://localhost:5000/api
+// In Production: The Express server serves both frontend static files and API on the same domain/port.
+const API_URL = "/api";
 
 // Helper to handle fetch errors
 const handleResponse = async (response: Response) => {
