@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import { SERVER_RESOURCES, SERVER_USERS, SERVER_CATEGORIES, SERVER_REVIEWS } from './data.js';
-import { Resource, User, Category, UserStatus, ResourceStatus, Review } from '../types.js';
+import { SERVER_RESOURCES, SERVER_USERS, SERVER_CATEGORIES, SERVER_REVIEWS } from './data';
+import { Resource, User, Category, UserStatus, ResourceStatus, Review } from '../types';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -203,7 +203,8 @@ app.get('/api/stats', (req, res) => {
 
 // --- STATIC FILES SERVING (For Production/Render) ---
 // Serve static files from the 'dist' directory (built by Vite)
-const distPath = path.join(__dirname, '../dist');
+// Use path.resolve for better reliability
+const distPath = path.resolve(__dirname, '../dist');
 app.use(express.static(distPath) as any);
 
 // Catch-all route to handle client-side routing

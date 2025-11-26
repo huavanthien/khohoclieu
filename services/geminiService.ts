@@ -1,6 +1,7 @@
 import { GoogleGenAI, Chat } from "@google/genai";
 
-// Ensure API Key is available
+// Ensure API Key is available. 
+// Vite 'define' in vite.config.ts will replace process.env.API_KEY with the actual string.
 const apiKey = process.env.API_KEY || "";
 
 const ai = new GoogleGenAI({ apiKey });

@@ -1,8 +1,7 @@
 import { Resource, User, Category, ResourceStatus, Review } from "../types";
 
 // Use relative path for API. 
-// In Development: Vite proxy (configured in vite.config.ts) forwards /api to http://localhost:5000/api
-// In Production: The Express server serves both frontend static files and API on the same domain/port.
+// This allows the request to work both in Dev (via Vite proxy) and Production (served by Express).
 const API_URL = "/api";
 
 // Helper to handle fetch errors
