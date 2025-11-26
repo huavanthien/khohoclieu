@@ -1,7 +1,8 @@
+
 import express from 'express';
 import cors from 'cors';
 import { SERVER_RESOURCES, SERVER_USERS, SERVER_CATEGORIES, SERVER_REVIEWS } from './data';
-import { Resource, User, Category, UserStatus, ResourceStatus, Review } from '../types';
+import { Resource, User, Category, UserStatus, ResourceStatus, Review } from '../src/types';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
