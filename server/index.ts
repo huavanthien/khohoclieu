@@ -14,7 +14,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors() as any);
-app.use(express.json());
+app.use(express.json() as any);
 
 // In-memory database simulation
 let resources: Resource[] = [...SERVER_RESOURCES];

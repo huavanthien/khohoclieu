@@ -10,13 +10,15 @@
     "start": "tsx server/index.ts"
   },
   "dependencies": {
-    "@google/genai": "^0.1.1",
+    "@google/genai": "^1.0.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "lucide-react": "^0.344.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.2"
+    "react-router-dom": "^6.22.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -28,8 +30,6 @@
     "autoprefixer": "^10.4.18",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
-    "tsx": "^4.7.1",
-    "typescript": "^5.3.3",
     "vite": "^5.1.4"
   }
 }
